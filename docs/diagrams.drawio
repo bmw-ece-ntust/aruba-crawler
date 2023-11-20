@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-17T08:07:09.675Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="4FFwQBsfDtNHIdXx727l" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-20T17:12:57.112Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="y0n6b8a06kxOSKax1yr4" version="22.1.3" type="github">
   <diagram id="sGIwBVWHnJSUWiUGoxyl" name="System Architecture - NTUST">
-    <mxGraphModel dx="1434" dy="-1439" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1735" dy="-1287" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,7 +28,7 @@
         <mxCell id="ZJkLvfZ912OTIozTvABd-1" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="169.92" y="2230" width="240.08" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="ZJkLvfZ912OTIozTvABd-3" value="&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;Ubuntu 20.04&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="ZJkLvfZ912OTIozTvABd-3" value="&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;Ubuntu 22.04&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="160" y="2230" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ZJkLvfZ912OTIozTvABd-4" value="WiFi&lt;br&gt;Data Crawler" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
