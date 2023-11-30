@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import argparse
 from controller.APDataCollector import APDataCollector
 from controller.Database import Database
 
@@ -7,6 +8,19 @@ from controller.Database import Database
 load_dotenv()
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        '--t',
+        '--time',
+        help='crawler active duration (minutes)',
+        dest='time',
+        default=5,
+        type=int
+    )
+
+    args = parser.parse_args()
+
     ap_names = ['D1_1F_AP01', 'D1_1F_AP02', 
                 'D1_1F_AP03', 'D1_1F_AP04',
                 'D1_1F_AP05', 'D1_1F_AP06', 
