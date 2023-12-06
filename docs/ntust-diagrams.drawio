@@ -1,20 +1,20 @@
-<mxfile host="app.diagrams.net" modified="2023-11-30T06:40:26.433Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="VhXFpYANIrai4gZGkM4X" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-06T06:41:00.413Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="uyMdLb5xSy1Ph2_Bn91S" version="22.1.5" type="github">
   <diagram id="sGIwBVWHnJSUWiUGoxyl" name="System Architecture - NTUST">
-    <mxGraphModel dx="658" dy="-1854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="-1875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="fcFX7bM13bByatmmkyj2-25" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1" connectable="0">
+        <mxCell id="fcFX7bM13bByatmmkyj2-25" value="" style="group;fillColor=#d5e8d4;strokeColor=#82b366;container=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="40" y="2540" width="490" height="300" as="geometry" />
         </mxCell>
         <mxCell id="fcFX7bM13bByatmmkyj2-26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="80" y="2210" width="422" height="310" as="geometry" />
+          <mxGeometry x="112" y="2210" width="358" height="310" as="geometry" />
         </mxCell>
         <mxCell id="fcFX7bM13bByatmmkyj2-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="fcFX7bM13bByatmmkyj2-18" target="0enA84CYQcfxxThrB4iv-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fcFX7bM13bByatmmkyj2-27" value="&lt;b&gt;Computer&lt;br&gt;Center&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="80" y="2210" width="80" height="40" as="geometry" />
+          <mxGeometry x="112" y="2210" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fcFX7bM13bByatmmkyj2-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="fcFX7bM13bByatmmkyj2-6" target="fcFX7bM13bByatmmkyj2-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -23,28 +23,25 @@
           <mxGeometry x="140.99999999999997" y="2425.44" width="297.91" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0enA84CYQcfxxThrB4iv-7" value="Aruba 7220 WiFi Controller" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.securewirelessworks.com/images/Controllers/7210/7210-ft.jpg;" parent="1" vertex="1">
-          <mxGeometry x="157.45999999999998" y="2330" width="264.99" height="35.44" as="geometry" />
+          <mxGeometry x="157.45999999999998" y="2350" width="264.99" height="35.44" as="geometry" />
         </mxCell>
         <mxCell id="ZJkLvfZ912OTIozTvABd-1" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="169.92" y="2230" width="240.08" height="90" as="geometry" />
+          <mxGeometry x="169.92" y="2250" width="240.08" height="90" as="geometry" />
         </mxCell>
         <mxCell id="ZJkLvfZ912OTIozTvABd-3" value="&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;Ubuntu 22.04&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="160" y="2230" width="100" height="30" as="geometry" />
+          <mxGeometry x="160" y="2250" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ZJkLvfZ912OTIozTvABd-4" value="WiFi&lt;br&gt;Data Crawler" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="2263" width="90" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ZJkLvfZ912OTIozTvABd-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="ZJkLvfZ912OTIozTvABd-6" target="ZJkLvfZ912OTIozTvABd-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry x="300" y="2280" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZJkLvfZ912OTIozTvABd-6" value="InfluxDB v2.0.2" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="2263" width="90" height="40" as="geometry" />
+          <mxGeometry x="190" y="2280" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZJkLvfZ912OTIozTvABd-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="0enA84CYQcfxxThrB4iv-7" target="ZJkLvfZ912OTIozTvABd-4" edge="1">
+        <mxCell id="ZJkLvfZ912OTIozTvABd-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="0enA84CYQcfxxThrB4iv-7" target="ZJkLvfZ912OTIozTvABd-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="290" y="2310" />
-              <mxPoint x="235" y="2310" />
+              <mxPoint x="290" y="2330" />
+              <mxPoint x="345" y="2330" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -125,6 +122,47 @@
         <mxCell id="fcFX7bM13bByatmmkyj2-24" value="Dormitory 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" parent="fcFX7bM13bByatmmkyj2-19" vertex="1">
           <mxGeometry x="-18.430000000000007" y="-10" width="90" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="GocP85Nau0MJWiB53a_h-1" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;dashed=1;dashPattern=8 8;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="520" y="2210" width="320" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="GocP85Nau0MJWiB53a_h-2" value="&lt;b&gt;BMW Lab.&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="2210" width="70" height="27" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;DB Server&lt;/b&gt;&lt;br&gt;aaa.bbb.ccc.115" link="aaa.bbb.ccc.115" id="GocP85Nau0MJWiB53a_h-3">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;" vertex="1" parent="1">
+            <mxGeometry x="550" y="2240" width="120" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="GocP85Nau0MJWiB53a_h-4" value="InfluxDB v2.0.2" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2275" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GocP85Nau0MJWiB53a_h-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZJkLvfZ912OTIozTvABd-6" target="ZJkLvfZ912OTIozTvABd-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="2300" />
+              <mxPoint x="290" y="2300" />
+            </Array>
+            <mxPoint x="300" y="2360" as="sourcePoint" />
+            <mxPoint x="355" y="2330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GocP85Nau0MJWiB53a_h-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZJkLvfZ912OTIozTvABd-4" target="GocP85Nau0MJWiB53a_h-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="565" y="2300" />
+            </Array>
+            <mxPoint x="447" y="2305" as="sourcePoint" />
+            <mxPoint x="502" y="2275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GocP85Nau0MJWiB53a_h-8" value="Data Processor&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2330" width="90" height="40" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;AI PC&lt;/b&gt;" link="140.118.122.115" id="GocP85Nau0MJWiB53a_h-9">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;" vertex="1" parent="1">
+            <mxGeometry x="690" y="2240" width="120" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
