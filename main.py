@@ -1,23 +1,40 @@
-from dotenv import load_dotenv
-import os
+from controller.aruba_data_collector import Controller_data_collector
 from controller.APDataCollector import APDataCollector
-from controller.Database import Database
 
+def Data_Collector_based_on_WebCrawling():
+    # Instantiate the data collector instance
+    controller_data_collector = Controller_data_collector()
+    
+    # Get controller cookie
+    controller248_cookie, controller249_cookie = controller_data_collector.get_controller_cookie()
+    
+    # Collect the AP data of Controller 248 & 249
+    ap_data = controller_data_collector.get_ap_data(controller248_cookie, controller249_cookie)
+    
+    # Collect the Client data of Controller 248 & 249
+    client_data = controller_data_collector.get_client_data(controller248_cookie, controller249_cookie)
+    
+    # Store the data to the InfluxDB in Computer Center 
+    controller_data_collector.store_data_to_influxdb(ap_data, client_data)
 
-load_dotenv()
+def AP_Collector_based_on_ArubaAPI():
+    # Instantiate the ap collector instance
+    ap_data_collector = APDataCollector()
+     
+    # Get AP data
+    ap_data = ap_data_collector.collect_ap_data()
+    
+    # Store AP data
+    print("Computer center:")
+    ap_data_collector.store_data_to_ComputerCenter_influxdb(ap_data)
+    print("IoT Server:")
+    ap_data_collector.store_data_to_IoTserver_influxdb(ap_data)
 
 if __name__ == '__main__':
-    ap_names = ['D1_1F_AP01', 'D1_1F_AP02', 
-                'D1_1F_AP03', 'D1_1F_AP04',
-                'D1_1F_AP05', 'D1_1F_AP06', 
-                'D1_1F_AP07', 'D1_1F_AP08']  # Your AP names
+    print("[INFO] Collect the AP and Client data (No RSSI) from Aruba Controller 248 & 249")
+    Data_Collector_based_on_WebCrawling()
+    print("[INFO] Collect the AP data (RSSI) from Aruba Controller 248")
+    AP_Collector_based_on_ArubaAPI()
 
-    aruba_username = os.getenv('ARUBA_USERNAME')
-    aruba_password = os.getenv('ARUBA_PASSWORD')
-    aruba_ipaddress = os.getenv('ARUBA_IPADDRESS')
 
-    database = Database()
-    data_controller = APDataCollector(
-        ap_names, aruba_username, aruba_password, aruba_ipaddress, database)
-
-    data_controller.collect_and_store_data()
+    

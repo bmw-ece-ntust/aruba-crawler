@@ -32,5 +32,6 @@ def get_aruba_id(aopsid, id, password):
         print("Error Status Code: ", status_code)
     else:
         aruba_id = get_aruba_uid.json()['_global_result']['UIDARUBA']
+        print(aruba_id)
         print("Successfully Retrieved ARUBA ID")
     return aruba_id
