@@ -50,9 +50,8 @@ def parse_aruba_data_to_dataframe(aruba_raw_data):
         for i in range(len(parameter_name)):
             parameter_name_total.append(parameter_name[i].text)
 
-
     aruba_data.index = parameter_name_total
     aruba_data = aruba_data.T
-    aruba_data.reset_index(drop=True, inplace=True)
-     
+    aruba_data.reset_index(drop=True, inplace=True) 
+    
     return aruba_data

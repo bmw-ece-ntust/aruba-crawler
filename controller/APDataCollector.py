@@ -7,9 +7,9 @@ import sys
 
 sys.path.append(os.path.dirname(os.getcwd()))
 
-from Aruba_API.session_controller import get_aruba_id
-from Aruba_API.show_command import list_show_command
-from Aruba_API.parse_data import parse_data
+from utils.Aruba_API.session_controller import get_aruba_id
+from utils.Aruba_API.show_command import list_show_command
+from utils.Aruba_API.parse_data import parse_data
 from utils.hashing import create_hash
 from utils.write_data_to_influxdb import influxdb_instance_for_ArubaAPI
 
@@ -44,9 +44,11 @@ class APDataCollector:
         self.ARUBA_PASSWORD = os.getenv('Controller_248_password')
         self.ARUBA_IPADDRESS = os.getenv('Controller_248_url')
         
-        # InfluxDB connection info
-        self.ComputerCenter_influxdb_url = os.getenv('InfluxDB_ComputerCenter_url')
-        self.IoTServer_influxdb_url = os.getenv('InfluxDB_IoTserver_url')
+        # Connection Information of InfluxDB in Computer Center
+        self.influxdb_ComputerCenter_url = os.getenv('InfluxDB_ComputerCenter_url')
+        
+        # Connection Information of InfluxDB in IoT Server
+        self.influxdb_IoTserver_url = os.getenv('InfluxDB_IoTserver_url')
 
     def get_aruba_token(self):
         """Get the Aruba access token.
@@ -203,7 +205,7 @@ class APDataCollector:
     def store_data_to_ComputerCenter_influxdb(self, ap_data):
         
         # Instantiate the InfluxDB API
-        client = influxdb_instance_for_ArubaAPI(url=self.ComputerCenter_influxdb_url, token="8gI7PJtbvzURdS_ASOG1jG2j9lNWPBjBWSNgUZawnoo3KYFF5tTXiVhBwF392OUClDJDZiZK5hmKJk6L-jwrrQ==", org="ian", bucket="ap")
+        client = influxdb_instance_for_ArubaAPI(url=self.influxdb_ComputerCenter_url, token="8gI7PJtbvzURdS_ASOG1jG2j9lNWPBjBWSNgUZawnoo3KYFF5tTXiVhBwF392OUClDJDZiZK5hmKJk6L-jwrrQ==", org="ian", bucket="ap")
         write_api = client.instantiate_write_api()
         
         # Write the AP RSSI to InfluxDB
@@ -218,7 +220,7 @@ class APDataCollector:
     def store_data_to_IoTserver_influxdb(self, ap_data):
         
         # Instantiate the InfluxDB API
-        client = influxdb_instance_for_ArubaAPI(url=self.IoTServer_influxdb_url, token="lRr8ngrKAlyseejkmzhlNOpx0G-jXFAQ2ljtCvSZpKU3fgd2hJQGD-5mI53RDnIs7AyljM73g43Y5nxTCD6gtA==", org="ian", bucket="ap")
+        client = influxdb_instance_for_ArubaAPI(url=self.influxdb_IoTserver_url, token="lRr8ngrKAlyseejkmzhlNOpx0G-jXFAQ2ljtCvSZpKU3fgd2hJQGD-5mI53RDnIs7AyljM73g43Y5nxTCD6gtA==", org="ian", bucket="ap")
         write_api = client.instantiate_write_api()
         
         # Write the AP RSSI to InfluxDB

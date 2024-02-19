@@ -23,7 +23,7 @@ class influxdb_instance_for_WebCrawling:
       write_api = self.influxdb_client.write_api(write_options=SYNCHRONOUS)
       return write_api
 
-    def write_wifi_client_data_to_influxdb(self, write_api, client_data):
+    def write_wifi_client_data_to_ComputerCenter_influxdb(self, write_api, client_data):
       """Writes the wifi client data to InfluxDB.
     
       Args:
@@ -61,8 +61,48 @@ class influxdb_instance_for_WebCrawling:
         # Write the data to InfluxDB
         write_api.write(bucket=self.bucket, record=[_client_point])
                 
-      print("Finish writing", len(client_data), "WiFi Client data")
-     
+      print("Finish writing", len(client_data), "WiFi Client data to computer center")
+    
+    def write_wifi_client_data_to_IoTserver_influxdb(self, write_api, client_data):
+      """Writes the wifi client data to InfluxDB.
+    
+      Args:
+        write_api: A write API client for InfluxDB.
+        bucket: The InfluxDB bucket to write the data to.
+        client_data: A list of wifi client data.
+    
+      Returns:
+        None.
+      """
+    
+      for i in range(len(client_data)):
+         
+        # Create a wifi client Point object
+        _client_point = Point("Client")\
+                .tag("sta_mac_address", client_data[i]["sta_mac_address_hashing"])\
+                .tag("client_user_name", client_data[i]["client_user_name"])\
+                .tag("ap_name", client_data[i]["ap_name"])\
+                .tag("client_ip_address", client_data[i]["client_ip_address_hashing"])\
+                .tag("bssid", client_data[i]["bssid_hashing"])\
+                .tag("ssid", client_data[i]["ssid"])\
+                .tag("client_role_name", client_data[i]["client_role_name"])\
+                .field("client_health", int(client_data[i]["client_health"]))\
+                .field("channel", int(client_data[i]["channel"]))\
+                .field("radio_band", client_data[i]["radio_band"])\
+                .field("speed", int(client_data[i]["speed"]))\
+                .field("snr", int(client_data[i]["snr"]))\
+                .field("total_data_bytes", int(client_data[i]["total_data_bytes"]))\
+                .field("avg_data_rate", int(client_data[i]["avg_data_rate"]))\
+                .field("tx_bytes_transmitted", int(client_data[i]["tx_bytes_transmitted"]))\
+                .field("rx_data_bytes", int(client_data[i]["rx_data_bytes"]))\
+                .field("total_data_throughput", int(client_data[i]["total_data_throughput"]))\
+                #.time(client_data[i]["time_stamp"])
+    
+        # Write the data to InfluxDB
+        write_api.write(bucket=self.bucket, record=[_client_point])
+                
+      print("Finish writing", len(client_data), "WiFi Client data to IoT Server")    
+    
     def write_wifi_ap_data_to_influxdb(self, write_api, ap_data):
       """Writes the wifi AP data to InfluxDB.
     
@@ -82,6 +122,7 @@ class influxdb_instance_for_WebCrawling:
                       .tag("ap_name", ap_data[i]["ap_name"])\
                       .tag("radio_band", ap_data[i]["radio_band"])\
                       .tag("ap_group_building", ap_data[i]["ap_group_building"])\
+                      .tag("channel", ap_data[i]["channel_str"])\
                       .tag("ap_group_floor", ap_data[i]["ap_group_floor"])\
                       .field("total_data_bytes", int(ap_data[i]["total_data_bytes"]))\
                       .field("radio_mode", int(ap_data[i]["radio_mode"]))\
@@ -99,6 +140,8 @@ class influxdb_instance_for_WebCrawling:
                       .field("tx_avg_data_rate", int(ap_data[i]["tx_avg_data_rate"]))\
                       .field("rx_avg_data_rate", int(ap_data[i]["rx_avg_data_rate"]))\
                       .field("ap_quality", int(ap_data[i]["ap_quality"]))\
+                      .field("rx_data_bytes", int(ap_data[i]["rx_data_bytes"]))\
+                      .field("arm_ch_qual", int(ap_data[i]["arm_ch_qual"]))
                       #.time(ap_data[i]["time_stamp"])
                       
               #Write the data to InfluxDB
