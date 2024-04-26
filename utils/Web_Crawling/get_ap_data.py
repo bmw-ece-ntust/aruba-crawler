@@ -16,7 +16,7 @@ def get_aruba_ap248_249_data(ip_addr, cookie):
     payload_parameter = 'ap_name radio_band total_data_bytes rx_data_bytes channel_str radio_mode eirp_10x max_eirp noise_floor arm_ch_qual sta_count current_channel_utilization rx_time tx_time channel_interference channel_free channel_busy avg_data_rate tx_avg_data_rate rx_avg_data_rate ap_quality'
     params = {
         'dashboard_url': 'https://' + ip_addr + ':4343/screens/cmnutil/execUiQuery.xml',
-        'payload': 'query=<aruba_queries><query><qname>backend-observer-radio-28</qname><type>list</type><list_query><device_type>radio</device_type><requested_columns>' + payload_parameter +'</requested_columns><sort_by_field>ap_name</sort_by_field><sort_order>asc</sort_order><pagination><start_row>0</start_row><num_rows>400</num_rows></pagination></list_query></query></aruba_queries>&UIDARUBA=' + cookie,
+        'payload': 'query=<aruba_queries><query><qname>backend-observer-radio-28</qname><type>list</type><list_query><device_type>radio</device_type><requested_columns>' + payload_parameter +'</requested_columns><sort_by_field>ap_name</sort_by_field><sort_order>asc</sort_order><pagination><start_row>0</start_row><num_rows>2000</num_rows></pagination></list_query></query></aruba_queries>&UIDARUBA=' + cookie,
         'dashboard_cookie' : {"SESSION": cookie},
         'headers': {'Content-Type': 'text/plain'}
     }
